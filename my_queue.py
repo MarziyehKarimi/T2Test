@@ -10,10 +10,10 @@ class Queue:
         self.size = 0
 
 
-    def is_empty(self): #complexity : tete(1)
+    def is_empty(self): #time complexity : tete(1)
         return self.size == 0
 
-    def enqueue(self,data): #complexity : tete(1)
+    def enqueue(self,data): #time complexity : tete(1)
         new = self.Node(data)
         if self.is_empty():
             self.head = new
@@ -22,7 +22,7 @@ class Queue:
         self.tail = new
         self.size += 1
 
-    def dequeue(self): #complexity : tete(1)
+    def dequeue(self): #time complexity : tete(1)
         if self.is_empty():
             raise AssertionError('empty queue can not dequeue')
         result = self.head.data
@@ -32,10 +32,5 @@ class Queue:
             self.last = None
         return result
 
-
-
-
-
-
-
-    
+    def Size(self):
+        return self.size
